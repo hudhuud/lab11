@@ -1,7 +1,70 @@
+#Задание 1. Matrix1. Даны целые положительные числа M и N. Сформировать целочисленную матрицу размера M ? N, у которой все элементы I-й строки имеют значение 10·I (I = 1, …, M).
+#Шарапова Ангира 21 ис 21
+
 m, n = [int(x) for x in input().split()]
 for i in range(m):
     print(f'{10*i} '*m , end='\n')
     
     
     
+m, n, k = [int(x) for x in input().split()] #столбец строка элемент
+lst = []
+count = 0
+for i in range(m):
+    s = []
+    for j in range(n):
+        s.append(count)
+        count += 1
+    lst.append(s)
+print(lst) #Для наглядности, что выводится K-строчка по человеческому порядку(от 1 до M)
+print(lst[k-1])
 
+m = int(input())
+n = int(input())
+k = int(input())
+lst = []
+i2 = 0
+for i in range(m):
+    s = []
+    for j in range(n):
+        s.append(i2)
+        i2 += 1
+    lst.append(s)
+print(lst[k-1])
+
+
+def multiply(lst):
+    x = 1
+    for i in lst:
+        x *= i
+    return x
+m, n, k = [int(x) for x in input().split()] #столбец строка элемент
+lst = []
+count = 0
+for i in range(m):
+    s = []
+    for j in range(n):
+        s.append(count)
+        count += 1
+    lst.append(s)
+print(lst) #Для наглядности, что выводится сумма K-строчки по человеческому порядку(от 1 до M)
+print(sum(lst[k-1]), multiply(lst[k-1]))
+
+
+def multiply(lst):#упрощаем жизнь в выводе
+    x = 1
+    for i in lst:
+        x *= i
+    return x
+m = int(input())
+n = int(input())
+k = int(input())
+lst = []
+i2 = 0
+for i in range(m):
+    s = []
+    for j in range(n):
+        s.append(i2)
+        i2 += 1
+    lst.append(s)
+print(sum(lst[k-1]), multiply(lst[k-1]))
