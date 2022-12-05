@@ -1,1 +1,18 @@
+#Задание 3. Matrix17. Дана матрица размера M ? N и целое число K (1 ? K ? M). Найти сумму и произведение элементов K-й строки данной матрицы.
+#Шарапова АНгира 21 ис 21
 
+def multiply(lst):
+    x = 1
+    for i in lst:
+        x *= i
+    return x
+m, n, k = [int(x) for x in input().split()] #ввод столбца, строки и элемента
+lst = []
+count = 0
+for i in range(m):
+    s = []
+    for j in range(n):
+        s.append(count)
+        count += 1
+    lst.append(s)
+print(sum(lst[k-1]), multiply(lst[k-1]))
